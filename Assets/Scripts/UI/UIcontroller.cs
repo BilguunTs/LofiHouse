@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using FMODUnity;
 public class UIcontroller : MonoBehaviour
 {
     public Button trackButton;
@@ -9,7 +10,7 @@ public class UIcontroller : MonoBehaviour
     public Slider trackVolSlider;
     public Slider ambientVolSlider;
 
-
+    
     private void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
@@ -20,13 +21,24 @@ public class UIcontroller : MonoBehaviour
 
         trackButton.clicked += trackButtonPressed;
         ambientButton.clicked += ambientButtonPressed;
+        trackVolSlider.RegisterCallback<MouseCaptureEvent>(evt =>
+        {
+            Debug.Log(trackVolSlider.value);
+        });    
     }
 
     void trackButtonPressed() {
-        Debug.Log("Hey I am song button what do you want");
+
     }
 
     void ambientButtonPressed() { }
 
+    void onAmbientVolSlide()
+    {
 
+    }
+    void onTrackVolSlide()
+    {
+
+    }
 }
