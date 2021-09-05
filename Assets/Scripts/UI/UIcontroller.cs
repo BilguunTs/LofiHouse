@@ -14,9 +14,11 @@ public class UIcontroller : MonoBehaviour
     private void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
-        trackButton = root.Q<Button>("song-btn");
+        
+        
+        trackButton = root.Q<Button>("track-btn");
         ambientButton = root.Q<Button>("ambient-btn");
-        trackVolSlider = root.Q<Slider>("track-vol-ctrl");
+        trackVolSlider = root.Q<Slider>("track-ctrl");
         ambientVolSlider = root.Q<Slider>("ambient-ctrl");
 
         trackButton.clicked += trackButtonPressed;
@@ -29,6 +31,8 @@ public class UIcontroller : MonoBehaviour
 
     void trackButtonPressed() {
 
+        
+        //RuntimeManager.PauseAllEvents(true);
     }
 
     void ambientButtonPressed() { }

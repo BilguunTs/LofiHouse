@@ -3,19 +3,21 @@
     border-right-width: 4px;
     border-top-width: 4px;
     border-bottom-width: 4px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: rgb(103, 103, 102);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: rgba(103, 103, 102, 0.39);
     border-left-color: rgba(255, 255, 255, 0.16);
     border-right-color: rgba(255, 255, 255, 0.16);
     border-top-color: rgba(255, 255, 255, 0.16);
     border-bottom-color: rgba(255, 255, 255, 0.16);
-    -unity-background-image-tint-color: rgba(67, 67, 67, 0.95);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.39);
     color: rgb(255, 255, 255);
     font-size: 21px;
-    background-image: url('/Assets/Icons/Icon_05.gif');
+    background-image: none;
+    width: 65px;
+    height: 65px;
 }
 
 .default-button:hover {
@@ -23,16 +25,41 @@
     border-right-width: 4px;
     border-top-width: 4px;
     border-bottom-width: 4px;
-    border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    background-color: rgba(159, 159, 159, 0.19);
-    border-left-color: rgba(255, 255, 255, 0.87);
-    border-right-color: rgba(255, 255, 255, 0.87);
-    border-top-color: rgba(255, 255, 255, 0.87);
-    border-bottom-color: rgba(255, 255, 255, 0.87);
-    -unity-background-image-tint-color: rgba(255, 165, 165, 0.78);
-    color: rgb(65, 65, 65);
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: rgba(103, 103, 102, 0.59);
+    border-left-color: rgba(255, 255, 255, 0.39);
+    border-right-color: rgba(255, 255, 255, 0.39);
+    border-top-color: rgba(255, 255, 255, 0.39);
+    border-bottom-color: rgba(255, 255, 255, 0.39);
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.59);
+    color: rgb(255, 255, 255);
     font-size: 21px;
+    background-image: none;
+    width: 65px;
+    height: 65px;
+}
+
+.default-button:active {
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: rgba(255, 215, 139, 0.39);
+    border-left-color: rgba(255, 214, 138, 0.39);
+    border-right-color: rgba(255, 214, 138, 0.39);
+    border-top-color: rgba(255, 214, 138, 0.39);
+    border-bottom-color: rgba(255, 214, 138, 0.39);
+    -unity-background-image-tint-color: rgba(255, 215, 139, 0.59);
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+    background-image: none;
+    width: 65px;
+    height: 65px;
 }
