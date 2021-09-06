@@ -12,15 +12,27 @@ public class UIcontroller : MonoBehaviour
     public Slider ambientVolSlider;
 
     private EventInstance lofisongs;
+    private EventInstance rainSFX;
+
     private PLAYBACK_STATE lofisongsSTATE;
+    
     private bool shouldPauseSong;
+    private bool shouldPauseRain;
 
     private void Start()
     {
+        initSounds();
+        initUI();
+    }
+
+    private void Update()
+    {
+        handleEventEmmiter();               
+    }
+    private void initUI()
+    {
         var root = GetComponent<UIDocument>().rootVisualElement;
-        lofisongs = RuntimeManager.CreateInstance("event:/LofiSongs");
-        lofisongs.start();
-        
+
         trackButton = root.Q<Button>("track-btn");
         ambientButton = root.Q<Button>("ambient-btn");
         trackVolSlider = root.Q<Slider>("track-ctrl");
@@ -31,32 +43,34 @@ public class UIcontroller : MonoBehaviour
         trackVolSlider.RegisterCallback<MouseCaptureEvent>(evt =>
         {
             Debug.Log(trackVolSlider.value);
-        });    
+        });
     }
-
-    private void Update()
+    private void initSounds()
     {
-        handleEventEmmiter();               
-    }
+        lofisongs = RuntimeManager.CreateInstance("event:/LofiSongs");
+        rainSFX = RuntimeManager.CreateInstance("event:/RainSFX");
 
+        rainSFX.start();
+
+        lofisongs.start();
+    }
+   
     private void handleEventEmmiter()
     {
-        if (shouldPauseSong)
-        {
-            lofisongs.setPaused(true);
-        }
-        else if (shouldPauseSong == false)
-        {
-            lofisongs.setPaused(false);
-        }
+       
+        lofisongs.setPaused(shouldPauseSong);
+        rainSFX.setPaused(shouldPauseRain);
+       
+       
     }
 
     void trackButtonPressed() {
-
         shouldPauseSong = !shouldPauseSong;        
     }
 
-    void ambientButtonPressed() { }
+    void ambientButtonPressed() {
+        shouldPauseRain = !shouldPauseRain;
+    }
 
     void onAmbientVolSlide()
     {

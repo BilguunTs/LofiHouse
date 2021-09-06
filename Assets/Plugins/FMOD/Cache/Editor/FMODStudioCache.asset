@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Assets/FMODbanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637665342189476248
+  lastModified: 637665498011665272
   FileSizes:
   - Name: 
-    Value: 746
+    Value: 796
   Exists: 1
 --- !u!114 &-1947979273642297050
 MonoBehaviour:
@@ -59,12 +59,13 @@ MonoBehaviour:
   - {fileID: 5137868697033592093}
   EditorEvents:
   - {fileID: 2797745886500552197}
+  - {fileID: 6355957100535396890}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5137868697033592093}
   StringsBanks:
   - {fileID: -7668579582117365796}
-  stringsBankWriteTime: 637665342189476248
+  stringsBankWriteTime: 637665498011665272
   cacheVersion: 8
 --- !u!114 &2797745886500552197
 MonoBehaviour:
@@ -104,6 +105,29 @@ MonoBehaviour:
   Path: Assets/FMODbanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637665342189385488
+  lastModified: 637665498011655301
   FileSizes: []
   Exists: 1
+--- !u!114 &6355957100535396890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/RainSFX
+  m_EditorClassIdentifier: 
+  Path: event:/RainSFX
+  guid: c19b595484536f41ae3ed56b6cf30c8b
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 120192
