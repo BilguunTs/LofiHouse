@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 using FMODUnity;
+using FMOD.Studio;
 public class UIcontroller : MonoBehaviour
 {
     public Button trackButton;
@@ -10,11 +11,15 @@ public class UIcontroller : MonoBehaviour
     public Slider trackVolSlider;
     public Slider ambientVolSlider;
 
-    
+    private EventInstance lofisongs;
+    private PLAYBACK_STATE lofisongsSTATE;
+    private bool shouldPauseSong;
+
     private void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
-        
+        lofisongs = RuntimeManager.CreateInstance("event:/LofiSongs");
+        lofisongs.start();
         
         trackButton = root.Q<Button>("track-btn");
         ambientButton = root.Q<Button>("ambient-btn");
@@ -29,10 +34,26 @@ public class UIcontroller : MonoBehaviour
         });    
     }
 
+    private void Update()
+    {
+        handleEventEmmiter();               
+    }
+
+    private void handleEventEmmiter()
+    {
+        if (shouldPauseSong)
+        {
+            lofisongs.setPaused(true);
+        }
+        else if (shouldPauseSong == false)
+        {
+            lofisongs.setPaused(false);
+        }
+    }
+
     void trackButtonPressed() {
 
-        
-        //RuntimeManager.PauseAllEvents(true);
+        shouldPauseSong = !shouldPauseSong;        
     }
 
     void ambientButtonPressed() { }
@@ -44,5 +65,12 @@ public class UIcontroller : MonoBehaviour
     void onTrackVolSlide()
     {
 
+    }
+
+    private bool IsPlaying(EventInstance instance)
+    {
+        
+        instance.getPlaybackState(out lofisongsSTATE);
+        return lofisongsSTATE != PLAYBACK_STATE.STOPPED;
     }
 }
