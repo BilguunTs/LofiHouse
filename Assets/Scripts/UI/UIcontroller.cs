@@ -10,6 +10,8 @@ public class UIcontroller : MonoBehaviour
     public Button ambientButton;
     public Slider trackVolSlider;
     public Slider ambientVolSlider;
+    public float trackVol = 80f;
+    public float ambientVol = 70f;
 
     private EventInstance lofisongs;
     private EventInstance rainSFX;
@@ -18,6 +20,7 @@ public class UIcontroller : MonoBehaviour
     
     private bool shouldPauseSong;
     private bool shouldPauseRain;
+
 
     private void Start()
     {
@@ -41,8 +44,12 @@ public class UIcontroller : MonoBehaviour
         trackButton.clicked += trackButtonPressed;
         ambientButton.clicked += ambientButtonPressed;
         trackVolSlider.RegisterCallback<MouseCaptureEvent>(evt =>
-        {
-            Debug.Log(trackVolSlider.value);
+        {          
+            if (trackVolSlider.value <= 0)
+            {
+                lofisongs.setVolume(0);              
+            }
+            lofisongs.setVolume( trackVolSlider.value/100);
         });
     }
     private void initSounds()
@@ -51,7 +58,6 @@ public class UIcontroller : MonoBehaviour
         rainSFX = RuntimeManager.CreateInstance("event:/RainSFX");
 
         rainSFX.start();
-
         lofisongs.start();
     }
    
@@ -60,8 +66,8 @@ public class UIcontroller : MonoBehaviour
        
         lofisongs.setPaused(shouldPauseSong);
         rainSFX.setPaused(shouldPauseRain);
-       
-       
+        
+        //lofisongs.setVolume(trackVol);       
     }
 
     void trackButtonPressed() {
@@ -87,4 +93,5 @@ public class UIcontroller : MonoBehaviour
         instance.getPlaybackState(out lofisongsSTATE);
         return lofisongsSTATE != PLAYBACK_STATE.STOPPED;
     }
+
 }
