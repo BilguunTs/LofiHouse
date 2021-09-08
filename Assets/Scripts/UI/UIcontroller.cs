@@ -45,12 +45,13 @@ public class UIcontroller : MonoBehaviour
         ambientButton.clicked += ambientButtonPressed;
         trackVolSlider.RegisterCallback<MouseCaptureEvent>(evt =>
         {          
-            if (trackVolSlider.value <= 0)
-            {
-                lofisongs.setVolume(0);              
-            }
             lofisongs.setVolume( trackVolSlider.value/100);
         });
+        ambientVolSlider.RegisterCallback<MouseCaptureEvent>(evt => {
+         
+            rainSFX.setVolume(ambientVolSlider.value / 100);
+        });
+
     }
     private void initSounds()
     {
@@ -62,12 +63,9 @@ public class UIcontroller : MonoBehaviour
     }
    
     private void handleEventEmmiter()
-    {
-       
+    {      
         lofisongs.setPaused(shouldPauseSong);
         rainSFX.setPaused(shouldPauseRain);
-        
-        //lofisongs.setVolume(trackVol);       
     }
 
     void trackButtonPressed() {
