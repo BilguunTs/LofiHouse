@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using FMODUnity;
 using FMOD.Studio;
+
+
+
 public class UIcontroller : MonoBehaviour
 {
     public Button trackButton;
@@ -63,12 +66,21 @@ public class UIcontroller : MonoBehaviour
     }
    
     private void handleEventEmmiter()
-    {      
+    {
+
+        handleButtonStyle();
         lofisongs.setPaused(shouldPauseSong);
         rainSFX.setPaused(shouldPauseRain);
     }
 
-    void trackButtonPressed() {
+    private void handleButtonStyle()
+    {
+
+        ambientButton.style.backgroundColor = shouldPauseRain == false ?Color.cyan : Color.clear;
+        trackButton.style.backgroundColor = shouldPauseSong == false ? Color.cyan : Color.clear;
+
+    }
+    void trackButtonPressed() {       
         shouldPauseSong = !shouldPauseSong;        
     }
 

@@ -1,13 +1,14 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="/Assets/Scripts/UI/Styles/DefaultStyle.uss" />
     <ui:VisualElement style="flex-grow: 1; flex-direction: row; justify-content: space-around;">
-        <ui:VisualElement name="LeftColumn" />
-        <ui:VisualElement name="center" />
-        <ui:VisualElement name="RIghtColumn" style="justify-content: center;">
+        <ui:VisualElement name="LeftColumn" style="justify-content: center;">
             <ui:VisualElement style="-unity-text-align: upper-center; flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 20px;">
                 <ui:Slider picking-mode="Ignore" value="80" high-value="100" direction="Vertical" show-input-field="false" inverted="false" name="track-ctrl" class="default-slider" style="flex-direction: column; opacity: 0.8;" />
-                <ui:Button display-tooltip-when-elided="true" name="track-btn" class="default-button" style="background-image: url(&apos;/Assets/Icons/music-on.gif&apos;);" />
+                <ui:Button display-tooltip-when-elided="true" name="track-btn" class="default-button" style="background-image: url(&apos;/Assets/Icons/music-on.gif&apos;); color: rgb(178, 178, 178);" />
             </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="center" />
+        <ui:VisualElement name="RIghtColumn" style="justify-content: center;">
             <ui:VisualElement style="-unity-text-align: upper-center; flex-direction: row;">
                 <ui:Slider picking-mode="Ignore" value="70.8" high-value="100" direction="Vertical" name="ambient-ctrl" inverted="false" show-input-field="false" style="flex-grow: 0; flex-shrink: 0; flex-direction: column; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; opacity: 0.8; border-left-color: rgb(7, 7, 7); border-right-color: rgb(7, 7, 7); border-top-color: rgb(7, 7, 7); border-bottom-color: rgb(7, 7, 7); background-color: rgba(0, 0, 0, 0); -unity-font-style: normal;" />
                 <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" name="ambient-btn" class="default-button" style="background-image: url(&apos;/Assets/Icons/raining.png&apos;); -unity-background-image-tint-color: rgba(255, 255, 255, 0.5); -unity-background-scale-mode: stretch-to-fill; -unity-slice-left: 10; -unity-slice-top: 10; -unity-slice-right: 10; -unity-slice-bottom: 10; background-color: rgba(255, 255, 255, 0.07);" />

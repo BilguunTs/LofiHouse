@@ -7,11 +7,11 @@
     border-bottom-left-radius: 12px;
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
-    background-color: rgba(103, 103, 102, 0.39);
-    border-left-color: rgba(255, 255, 255, 0.16);
-    border-right-color: rgba(255, 255, 255, 0.16);
-    border-top-color: rgba(255, 255, 255, 0.16);
-    border-bottom-color: rgba(255, 255, 255, 0.16);
+    background-color: rgba(178, 178, 178, 0.75);
+    border-left-color: rgba(255, 255, 255, 0.75);
+    border-right-color: rgba(255, 255, 255, 0.75);
+    border-top-color: rgba(255, 255, 255, 0.75);
+    border-bottom-color: rgba(255, 255, 255, 0.75);
     -unity-background-image-tint-color: rgba(255, 255, 255, 0.39);
     color: rgb(255, 255, 255);
     font-size: 21px;
