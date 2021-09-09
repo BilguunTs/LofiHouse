@@ -76,8 +76,8 @@ public class UIcontroller : MonoBehaviour
     private void handleButtonStyle()
     {
 
-        ambientButton.style.backgroundColor = shouldPauseRain == false ?Color.cyan : Color.clear;
-        trackButton.style.backgroundColor = shouldPauseSong == false ? Color.cyan : Color.clear;
+        ambientButton.style.backgroundColor = shouldPauseRain == false ?Color.gray : Color.clear;
+        trackButton.style.backgroundColor = shouldPauseSong == false ? Color.gray: Color.clear;
 
     }
     void trackButtonPressed() {       
