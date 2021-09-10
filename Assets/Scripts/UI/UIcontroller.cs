@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using FMODUnity;
-using FMOD.Studio;
 
 
 
@@ -11,27 +9,19 @@ public class UIcontroller : MonoBehaviour
 {
     public Button trackButton;
     public Button ambientButton;
-    public Slider trackVolSlider;
-    public Slider ambientVolSlider;
-    public float trackVol = 80f;
-    public float ambientVol = 70f;
+  
+    public TrackSliderControl track;
 
-    private EventInstance lofisongs;
-    private EventInstance rainSFX;
-
-    private PLAYBACK_STATE lofisongsSTATE;
-    
-    private bool shouldPauseSong;
-    private bool shouldPauseRain;
-
-
-    private void Start()
-    {
-        initSounds();
+    public void Start()
+    {                  
+        if(track == null)
+        {
+            track = FindObjectOfType<TrackSliderControl>();
+        }
         initUI();
     }
 
-    private void Update()
+    void Update()
     {
         handleEventEmmiter();               
     }
@@ -41,67 +31,31 @@ public class UIcontroller : MonoBehaviour
 
         trackButton = root.Q<Button>("track-btn");
         ambientButton = root.Q<Button>("ambient-btn");
-        trackVolSlider = root.Q<Slider>("track-ctrl");
-        ambientVolSlider = root.Q<Slider>("ambient-ctrl");
-
+      
+        
         trackButton.clicked += trackButtonPressed;
-        ambientButton.clicked += ambientButtonPressed;
-        trackVolSlider.RegisterCallback<MouseCaptureEvent>(evt =>
-        {          
-            lofisongs.setVolume( trackVolSlider.value/100);
-        });
-        ambientVolSlider.RegisterCallback<MouseCaptureEvent>(evt => {
-         
-            rainSFX.setVolume(ambientVolSlider.value / 100);
-        });
+        ambientButton.clicked += ambientButtonPressed;       
 
     }
-    private void initSounds()
-    {
-        lofisongs = RuntimeManager.CreateInstance("event:/LofiSongs");
-        rainSFX = RuntimeManager.CreateInstance("event:/RainSFX");
-
-        rainSFX.start();
-        lofisongs.start();
-    }
+   
    
     private void handleEventEmmiter()
     {
-
         handleButtonStyle();
-        lofisongs.setPaused(shouldPauseSong);
-        rainSFX.setPaused(shouldPauseRain);
     }
 
     private void handleButtonStyle()
-    {
-
-        ambientButton.style.backgroundColor = shouldPauseRain == false ?Color.gray : Color.clear;
-        trackButton.style.backgroundColor = shouldPauseSong == false ? Color.gray: Color.clear;
-
+    {        
+        trackButton.style.backgroundColor = track.isSongPlaying() ? Color.gray: Color.clear;
+        ambientButton.style.backgroundColor=track.isRainSFXPlaying()? Color.gray : Color.clear;
     }
-    void trackButtonPressed() {       
-        shouldPauseSong = !shouldPauseSong;        
+    void trackButtonPressed() {
+        track.PauseTrack();
     }
 
     void ambientButtonPressed() {
-        shouldPauseRain = !shouldPauseRain;
+        track.PauseRainSFX();
     }
-
-    void onAmbientVolSlide()
-    {
-
-    }
-    void onTrackVolSlide()
-    {
-
-    }
-
-    private bool IsPlaying(EventInstance instance)
-    {
-        
-        instance.getPlaybackState(out lofisongsSTATE);
-        return lofisongsSTATE != PLAYBACK_STATE.STOPPED;
-    }
+ 
 
 }
