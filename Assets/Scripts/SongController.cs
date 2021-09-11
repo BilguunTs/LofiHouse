@@ -3,18 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-
-
-public class UIcontroller : MonoBehaviour
+public class SongController : MonoBehaviour
 {
+    // Start is called before the first frame update
     public Button trackButton;
     public Button ambientButton;
-  
-    public TrackSliderControl track;
 
-    public void Start()
-    {                  
-        if(track == null)
+    [SerializeReference] public TrackSliderControl track;
+
+    void Start()
+    {
+        if (track == null)
         {
             track = FindObjectOfType<TrackSliderControl>();
         }
@@ -23,7 +22,7 @@ public class UIcontroller : MonoBehaviour
 
     void Update()
     {
-        handleEventEmmiter();               
+        handleEventEmmiter();
     }
     private void initUI()
     {
@@ -31,31 +30,33 @@ public class UIcontroller : MonoBehaviour
 
         trackButton = root.Q<Button>("track-btn");
         ambientButton = root.Q<Button>("ambient-btn");
-      
-        
+
+
         trackButton.clicked += trackButtonPressed;
-        ambientButton.clicked += ambientButtonPressed;       
+        ambientButton.clicked += ambientButtonPressed;
 
     }
-   
-   
+
+
     private void handleEventEmmiter()
     {
         handleButtonStyle();
     }
 
     private void handleButtonStyle()
-    {        
-        trackButton.style.backgroundColor = track.isSongPlaying() ? Color.gray: Color.clear;
-        ambientButton.style.backgroundColor=track.isRainSFXPlaying()? Color.gray : Color.clear;
+    {
+        trackButton.style.backgroundColor = track.isSongPlaying() ? Color.gray : Color.clear;
+        ambientButton.style.backgroundColor = track.isRainSFXPlaying() ? Color.gray : Color.clear;
     }
-    void trackButtonPressed() {
+    void trackButtonPressed()
+    {
         track.PauseTrack();
     }
 
-    void ambientButtonPressed() {
+    void ambientButtonPressed()
+    {
         track.PauseRainSFX();
     }
- 
+
 
 }
