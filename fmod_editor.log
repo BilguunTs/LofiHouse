@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 000001B4C57DC168 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0000029131568058 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -18,18 +18,18 @@
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B539D3D948
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B539D3D948
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B539D3D948
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B539D3D948
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000001B539D41B18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000001B539D41B18
-[LOG] SoundI::release                          : RainSFX (000001B539D401C8)
-[LOG] SoundI::release                          :     RainSFX (000001B52C8C8F48)
-[LOG] SoundI::release                          :     RainSFX (000001B539D41B18)
-[LOG] SoundI::release                          : Cute LofiMusic (000001B539D40378)
-[LOG] SoundI::release                          :     Cute LofiMusic (000001B52C8C95C8)
-[LOG] SoundI::release                          :     Cute LofiMusic (000001B539D3D948)
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000290B58155D8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000290B58155D8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000290B5815FF8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000290B5815FF8
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000290B58155D8
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000290B58155D8
+[LOG] SoundI::release                          : RainSFX (00000290B5817288)
+[LOG] SoundI::release                          :     RainSFX (00000290A303B6B8)
+[LOG] SoundI::release                          :     RainSFX (00000290B5815FF8)
+[LOG] SoundI::release                          : Cute LofiMusic (00000290B5814A08)
+[LOG] SoundI::release                          :     Cute LofiMusic (00000290A3038798)
+[LOG] SoundI::release                          :     Cute LofiMusic (00000290B58155D8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
