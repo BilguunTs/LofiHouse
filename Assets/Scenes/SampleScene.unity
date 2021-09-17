@@ -2488,6 +2488,8 @@ MonoBehaviour:
   rainVol: {fileID: 37490213}
   songBtn: {fileID: 1607637666}
   rainBtn: {fileID: 2031846481}
+  inActiveSongImage: {fileID: 6780871969535559895, guid: 805422213b97d194ba1869b77d3300f0, type: 3}
+  inActiveRainImage: {fileID: 5840244037596497068, guid: 805422213b97d194ba1869b77d3300f0, type: 3}
 --- !u!1 &1593798178
 GameObject:
   m_ObjectHideFlags: 0

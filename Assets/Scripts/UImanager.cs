@@ -13,10 +13,14 @@ public class UImanager : MonoBehaviour
     [SerializeField] public Slider rainVol;
     [SerializeField] public Button songBtn;
     [SerializeField] public Button rainBtn;
+    [SerializeField] public Sprite inActiveSongImage;
+    [SerializeField] public Sprite inActiveRainImage;
+    
 
     private bool shouldPauseSong=false;
     private bool shouldPauseRainSFX=false;
-
+    private Sprite ActiveSongImage;
+    private Sprite ActiveRainImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +40,9 @@ public class UImanager : MonoBehaviour
        rainBtn.onClick.AddListener(delegate { onRainBtnClick(); });
        songVol.onValueChanged.AddListener(delegate { SongValueChangeCheck(); });
        rainVol.onValueChanged.AddListener(delegate { RainValueChangeCheck(); });
+
+        ActiveRainImage = rainBtn.GetComponent<Image>().sprite;
+        ActiveSongImage = songBtn.GetComponent<Image>().sprite;
     }
 
     private void SongValueChangeCheck()
@@ -49,12 +56,15 @@ public class UImanager : MonoBehaviour
     {
         lofisongs.setPaused(!shouldPauseSong);
         shouldPauseSong = !shouldPauseSong;
+        songBtn.GetComponent<Image>().sprite = shouldPauseSong ? inActiveSongImage : ActiveSongImage;
+        
     }
     private void onRainBtnClick()
     {
         rainSFX.setPaused(!shouldPauseRainSFX);
         shouldPauseRainSFX = !shouldPauseRainSFX;
-        
+        rainBtn.GetComponent<Image>().sprite = shouldPauseRainSFX?inActiveRainImage:ActiveRainImage;
+    
     }
     private void initTracks()
     {
