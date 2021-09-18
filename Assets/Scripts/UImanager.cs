@@ -6,8 +6,8 @@ using FMODUnity;
 using UnityEngine.UI;
 public class UImanager : MonoBehaviour
 {
-    public EventInstance lofisongs;
-    public EventInstance rainSFX;
+    public static EventInstance lofisongs;
+    public static EventInstance rainSFX;
 
     [SerializeField] public Slider songVol;
     [SerializeField] public Slider rainVol;
@@ -15,12 +15,15 @@ public class UImanager : MonoBehaviour
     [SerializeField] public Button rainBtn;
     [SerializeField] public Sprite inActiveSongImage;
     [SerializeField] public Sprite inActiveRainImage;
-    
 
-    private bool shouldPauseSong=false;
-    private bool shouldPauseRainSFX=false;
+    
+    public bool shouldPauseSong = false;
+    public bool shouldPauseRainSFX = false;
+
+
     private Sprite ActiveSongImage;
     private Sprite ActiveRainImage;
+
     // Start is called before the first frame update
     void Start()
     {
