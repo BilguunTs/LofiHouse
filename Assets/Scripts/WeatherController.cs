@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class WeatherController : MonoBehaviour
 {
-    string WithoutRainColor = "#FFC758";
-    string WithRainColor = "#58C1FF";
-
     float duration = 1f;
-    Color dayColor = Color.yellow;
-    Color nightColor = Color.blue;
+    Color32 dayColor = new Color32(255, 199, 88,255);
+    Color32 nightColor = new Color32(88,203,255,255);
     
     [SerializeField] GameObject uiController;
     [SerializeField] GameObject light;
@@ -33,14 +30,19 @@ public class WeatherController : MonoBehaviour
     }
     private void ChangeWeather()
     {
-
-             if (uiManager.shouldPauseRainSFX)
+        // float t = Mathf.PingPong(Time.time, duration) / duration;
+        Color32 localCol = new Color32();
+        if (uiManager.shouldPauseRainSFX)
         {
-            sun.color = Color.Lerp(dayColor, nightColor, duration*Time.deltaTime);
+            sun.range = 16.3f;
+            localCol = dayColor;
         }
         else if (!uiManager.shouldPauseRainSFX)
         {
-            sun.color = Color.Lerp(nightColor, dayColor, duration * Time.deltaTime);
+            sun.range = 12f;
+            localCol = nightColor;
         }
+       
+        sun.color = Color32.Lerp(sun.color, localCol,  0.02f);
     }
 }
