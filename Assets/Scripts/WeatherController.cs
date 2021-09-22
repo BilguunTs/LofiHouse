@@ -14,12 +14,12 @@ public class WeatherController : MonoBehaviour
     
     private UImanager uiManager;
     private Light sun;
+    private float sunRange;
+    private Color32 sunColor;
     // Start is called before the first frame update
     void Start()
     {
-        uiManager = uiController.GetComponent<UImanager>();
-        sun = light.GetComponent<Light>();
-   
+        init();
     }
 
     // Update is called once per frame
@@ -28,21 +28,28 @@ public class WeatherController : MonoBehaviour
          ChangeWeather();
         
     }
+    private void init()
+    {
+        uiManager = uiController.GetComponent<UImanager>();
+        sun = light.GetComponent<Light>();
+        sunRange = sun.range;
+        sunColor = sun.color;
+    }
     private void ChangeWeather()
     {
         // float t = Mathf.PingPong(Time.time, duration) / duration;
-        Color32 localCol = new Color32();
+        
         if (uiManager.shouldPauseRainSFX)
         {
-            sun.range = 16.3f;
-            localCol = dayColor;
+            sunRange = 16.3f;
+            sunColor= dayColor;
         }
         else if (!uiManager.shouldPauseRainSFX)
         {
-            sun.range = 12f;
-            localCol = nightColor;
+            sunRange = 12f;
+            sunColor = nightColor;
         }
-       
-        sun.color = Color32.Lerp(sun.color, localCol,  0.02f);
+        sun.range = Mathf.Lerp(sun.range, sunRange, 0.02f);
+        sun.color = Color32.Lerp(sun.color, sunColor,  0.02f);
     }
 }
