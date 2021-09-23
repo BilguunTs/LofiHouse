@@ -16,13 +16,12 @@ public class WeatherController : MonoBehaviour
     private Light sun;
     private float sunRange;
     private Color32 sunColor;
-    // Start is called before the first frame update
+    
     void Start()
     {
         init();
     }
 
-    // Update is called once per frame
     void Update()
     {
          ChangeWeather();
@@ -46,7 +45,7 @@ public class WeatherController : MonoBehaviour
         }
         else if (!uiManager.shouldPauseRainSFX)
         {
-            sunRange = 12f;
+            sunRange = 10f;
             sunColor = nightColor;
         }
         sun.range = Mathf.Lerp(sun.range, sunRange, 0.02f);
