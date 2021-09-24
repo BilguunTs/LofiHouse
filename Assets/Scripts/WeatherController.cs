@@ -10,8 +10,9 @@ public class WeatherController : MonoBehaviour
     
     [SerializeField] GameObject uiController;
     [SerializeField] GameObject light;
+
     
-    
+
     private UImanager uiManager;
     private Light sun;
     private float sunRange;
