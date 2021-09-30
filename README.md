@@ -1,3 +1,3 @@
 # LofiHouse
-designed game for chill music
+chill music house
 Comming soon...
