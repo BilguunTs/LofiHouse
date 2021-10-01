@@ -15,11 +15,103 @@ MonoBehaviour:
   Path: Assets/FMODbanks/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637665498011665272
+  lastModified: 637686945223453374
   FileSizes:
   - Name: 
-    Value: 796
+    Value: 1342
   Exists: 1
+--- !u!114 &-5664434226486718209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/purrple-cat-calm-waters
+  m_EditorClassIdentifier: 
+  Path: event:/purrple-cat-calm-waters
+  guid: 61bbca561fe96f4dbc4684dd5a72fca1
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4527561134081349787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Morning-Routine-Lofi-Study-Music
+  m_EditorClassIdentifier: 
+  Path: event:/Morning-Routine-Lofi-Study-Music
+  guid: 64e7b318089b114c94fdb63837612b83
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4509662186880705210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ghostrifter-official-hot-coffee
+  m_EditorClassIdentifier: 
+  Path: event:/ghostrifter-official-hot-coffee
+  guid: f78f81f46e77df419b1a9a48e879b656
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2907426907568120561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/purrple-cat-green-tea
+  m_EditorClassIdentifier: 
+  Path: event:/purrple-cat-green-tea
+  guid: a1080f5a1734e144ac18fd76910be21f
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-1947979273642297050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,15 +150,117 @@ MonoBehaviour:
   - {fileID: -7668579582117365796}
   - {fileID: 5137868697033592093}
   EditorEvents:
-  - {fileID: 2797745886500552197}
   - {fileID: 6355957100535396890}
+  - {fileID: 1572186836653066831}
+  - {fileID: 7115899397511588405}
+  - {fileID: 1968145139430908985}
+  - {fileID: 8486007525804560407}
+  - {fileID: 6645667760323193138}
+  - {fileID: -5664434226486718209}
+  - {fileID: -4527561134081349787}
+  - {fileID: -2907426907568120561}
+  - {fileID: 520452278030822556}
+  - {fileID: 976403563427866202}
+  - {fileID: -4509662186880705210}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5137868697033592093}
   StringsBanks:
   - {fileID: -7668579582117365796}
-  stringsBankWriteTime: 637665498011665272
+  stringsBankWriteTime: 637686945223453374
   cacheVersion: 8
+--- !u!114 &520452278030822556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/purrple-cat-flourish
+  m_EditorClassIdentifier: 
+  Path: event:/purrple-cat-flourish
+  guid: bcc7fcccafb8e248a42bb8ae89de8224
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &976403563427866202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Still-Awake-Lofi-Study-Music
+  m_EditorClassIdentifier: 
+  Path: event:/Still-Awake-Lofi-Study-Music
+  guid: e1b2e9a0bbf25842bd6da1a08f3aa7f1
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1572186836653066831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/purrple-cat-equinox
+  m_EditorClassIdentifier: 
+  Path: event:/purrple-cat-equinox
+  guid: 10393568805543419d3d44099f8e7650
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1968145139430908985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/barradeen-bedtime-after-a-coffee
+  m_EditorClassIdentifier: 
+  Path: event:/barradeen-bedtime-after-a-coffee
+  guid: 30a926a1c64f1040aff2e9b01dbaaa9f
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &2797745886500552197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/LofiSongs
   guid: 07e93eb0cc1ef24a90cd6a342f1d2db3
-  Banks:
-  - {fileID: 5137868697033592093}
+  Banks: []
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -105,7 +298,7 @@ MonoBehaviour:
   Path: Assets/FMODbanks/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637665498011655301
+  lastModified: 637686945223443401
   FileSizes: []
   Exists: 1
 --- !u!114 &6355957100535396890
@@ -131,3 +324,72 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 120192
+--- !u!114 &6645667760323193138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/purrple-cat-field-of-fireflies
+  m_EditorClassIdentifier: 
+  Path: event:/purrple-cat-field-of-fireflies
+  guid: 5c65f93a8f3c8341a577e9fc994e1027
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7115899397511588405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/On-My-Way-Lofi-Study-Music
+  m_EditorClassIdentifier: 
+  Path: event:/On-My-Way-Lofi-Study-Music
+  guid: 17f702460ebc6f4d808e61ab5a509291
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8486007525804560407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/purrple-cat-lullaby
+  m_EditorClassIdentifier: 
+  Path: event:/purrple-cat-lullaby
+  guid: 4f9d39518fc34b408ad610cb0b081370
+  Banks:
+  - {fileID: 5137868697033592093}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0

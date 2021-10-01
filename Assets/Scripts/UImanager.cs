@@ -50,14 +50,14 @@ public class UImanager : MonoBehaviour
 
     private void SongValueChangeCheck()
     {
-        lofisongs.setVolume(songVol.value);
+       // lofisongs.setVolume(songVol.value);
     }
     private void RainValueChangeCheck() {
         rainSFX.setVolume(rainVol.value);
     }
     private void onSongBtnClick()
     {
-        lofisongs.setPaused(!shouldPauseSong);
+       // lofisongs.setPaused(!shouldPauseSong);
         shouldPauseSong = !shouldPauseSong;
         songBtn.GetComponent<Image>().sprite = shouldPauseSong ? inActiveSongImage : ActiveSongImage;
         
@@ -71,11 +71,11 @@ public class UImanager : MonoBehaviour
     }
     private void initTracks()
     {
-        lofisongs = RuntimeManager.CreateInstance("event:/LofiSongs");
+      
         rainSFX = RuntimeManager.CreateInstance("event:/RainSFX");
-        lofisongs.setVolume(songVol.value);
+      
         rainSFX.setVolume(rainVol.value);
-        lofisongs.start();
+       
         rainSFX.start();
     }
 }
