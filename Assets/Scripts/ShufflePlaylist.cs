@@ -9,14 +9,15 @@ public class ShufflePlaylist : MonoBehaviour
     public string[] fmodPaths;
 
     private EventInstance instance;
-
+    private bool shouldPause;
     private string artistName, songName;
     // Start is called before the first frame update
     void Start()
     {
         ShuffleMusic(fmodPaths);
+        shouldPause = IsPlaying(instance);
     }
-  
+   
     void ShuffleMusic(string[] a)
     {
         for (int i = a.Length - 1; i > 0; i--)
@@ -88,8 +89,16 @@ public class ShufflePlaylist : MonoBehaviour
         instance.getPlaybackState(out pS);
         return pS;
     }
+    bool IsPlaying(EventInstance instance)
+    {
+        PLAYBACK_STATE state;
+        instance.getPlaybackState(out state);
+        return state != PLAYBACK_STATE.STOPPED;
+    }
     public void PauseSong()
     {
-        
+        shouldPause = !shouldPause;
+        instance.setPaused(!shouldPause);
+       
     }
 }
