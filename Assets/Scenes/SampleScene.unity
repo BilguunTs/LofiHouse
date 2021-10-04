@@ -229,7 +229,19 @@ MonoBehaviour:
   m_Value: 0.8
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1731013701}
+        m_TargetAssemblyTypeName: SFXplayer, Assembly-CSharp
+        m_MethodName: setVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &69786289
 GameObject:
   m_ObjectHideFlags: 3
@@ -2216,7 +2228,19 @@ MonoBehaviour:
   m_Value: 0.818
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 799351552}
+        m_TargetAssemblyTypeName: ShufflePlaylist, Assembly-CSharp
+        m_MethodName: setVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1213336676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2913,6 +2937,7 @@ GameObject:
   - component: {fileID: 1607637668}
   - component: {fileID: 1607637667}
   - component: {fileID: 1607637666}
+  - component: {fileID: 1607637669}
   m_Layer: 5
   m_Name: SongBtn
   m_TagString: Untagged
@@ -3033,6 +3058,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1607637664}
   m_CullTransparentMesh: 1
+--- !u!114 &1607637669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607637664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972c5a0ab1297c4d94790ba4769c74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultImg: {fileID: 6780871969535559895, guid: 805422213b97d194ba1869b77d3300f0, type: 3}
+  activeImage: {fileID: -8637757135427345025, guid: fccd64de48e040145acea73cf5b2989f, type: 3}
 --- !u!1001 &1608235545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3336,6 +3375,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cc2cc07ad561d7d4c8f96944c01a45a1, type: 3}
   m_PrefabInstance: {fileID: 1619862017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1731013700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731013702}
+  - component: {fileID: 1731013701}
+  m_Layer: 0
+  m_Name: SFXplayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1731013701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731013700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 532d9402830ead6409910f5339d8f62c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fmodPath: event:/RainSFX
+--- !u!4 &1731013702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731013700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 886.9338, y: 508.32263, z: -757.7092}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1851040222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3836,6 +3919,7 @@ GameObject:
   - component: {fileID: 2031846483}
   - component: {fileID: 2031846482}
   - component: {fileID: 2031846481}
+  - component: {fileID: 2031846484}
   m_Layer: 5
   m_Name: AmbBtn
   m_TagString: Untagged
@@ -3905,7 +3989,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2031846482}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1731013701}
+        m_TargetAssemblyTypeName: SFXplayer, Assembly-CSharp
+        m_MethodName: PauseSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2031846482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3944,6 +4040,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2031846479}
   m_CullTransparentMesh: 1
+--- !u!114 &2031846484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031846479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4972c5a0ab1297c4d94790ba4769c74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultImg: {fileID: 5840244037596497068, guid: 805422213b97d194ba1869b77d3300f0, type: 3}
+  activeImage: {fileID: 2387979216866552413, guid: fccd64de48e040145acea73cf5b2989f, type: 3}
 --- !u!1 &2045462705
 GameObject:
   m_ObjectHideFlags: 0

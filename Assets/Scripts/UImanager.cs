@@ -27,8 +27,8 @@ public class UImanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initTracks();
-        initUI();
+        //initTracks();
+        //initUI();
     }
 
   
@@ -69,13 +69,5 @@ public class UImanager : MonoBehaviour
         rainBtn.GetComponent<Image>().sprite = shouldPauseRainSFX?inActiveRainImage:ActiveRainImage;
     
     }
-    private void initTracks()
-    {
-      
-        rainSFX = RuntimeManager.CreateInstance("event:/RainSFX");
-      
-        rainSFX.setVolume(rainVol.value);
-       
-        rainSFX.start();
-    }
+  
 }

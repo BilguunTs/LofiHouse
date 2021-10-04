@@ -10,6 +10,7 @@ public class ShufflePlaylist : MonoBehaviour
 
     private EventInstance instance;
     private bool shouldPause;
+    
     private string artistName, songName;
     // Start is called before the first frame update
     void Start()
@@ -82,14 +83,14 @@ public class ShufflePlaylist : MonoBehaviour
         }
      
     }
-
+  
     PLAYBACK_STATE PlaybackState(EventInstance instance)
     {
         PLAYBACK_STATE pS;
         instance.getPlaybackState(out pS);
         return pS;
     }
-    bool IsPlaying(EventInstance instance)
+    public static bool IsPlaying(EventInstance instance)
     {
         PLAYBACK_STATE state;
         instance.getPlaybackState(out state);
@@ -98,7 +99,12 @@ public class ShufflePlaylist : MonoBehaviour
     public void PauseSong()
     {
         shouldPause = !shouldPause;
-        instance.setPaused(!shouldPause);
-       
+        instance.setPaused(!shouldPause);       
     }
+    public void setVolume(float vol)
+    {
+       instance.setVolume(vol);
+    }
+
+   
 }
