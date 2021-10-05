@@ -5,16 +5,16 @@ using UnityEngine;
 public class HouseController : MonoBehaviour
 {
     [SerializeField] GameObject deskLamp;
-    [SerializeField] GameObject uiController;
-    private UImanager uiManager;
+    [SerializeField] GameObject SFXinstance;
+    private SFXplayer sfxPlayer;
     private Light lamplight;
     // Start is called before the first frame update
     void Start()
     {
-      if(deskLamp!=null&&uiController!=null)
+      if(deskLamp!=null&&SFXinstance!=null)
       {
             lamplight = deskLamp.GetComponent<Light>();
-            uiManager = uiController.GetComponent<UImanager>();
+            sfxPlayer= SFXinstance.GetComponent<SFXplayer>();
 
       }
     }
@@ -22,9 +22,9 @@ public class HouseController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (uiManager!=null)
+        if (sfxPlayer!=null)
         {
-            lamplight.enabled = uiManager.shouldPauseRainSFX ?false : true;
+            lamplight.enabled = sfxPlayer.getPlayerState()?false : true;
         }
     }
 }

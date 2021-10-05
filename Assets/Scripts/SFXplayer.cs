@@ -33,5 +33,9 @@ public class SFXplayer : MonoBehaviour
     {
         instance.setVolume(vol);
     }
+    public bool getPlayerState()
+    {
+        return shouldPlaySFX;
+    }
 
 }

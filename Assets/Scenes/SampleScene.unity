@@ -1216,7 +1216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deskLamp: {fileID: 1449178388}
-  uiController: {fileID: 2020609037}
+  SFXinstance: {fileID: 1731013700}
 --- !u!4 &741960937
 Transform:
   m_ObjectHideFlags: 0
@@ -1229,7 +1229,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &799351551
 GameObject:
@@ -1260,6 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c24af16feab6ab04d8d2a6fcece4dead, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  songTitle: {fileID: 875121877}
   fmodPaths:
   - event:/barradeen-bedtime-after-a-coffee
   - event:/ghostrifter-official-hot-coffee
@@ -1284,7 +1285,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875121875
 GameObject:
@@ -1352,8 +1353,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 2197815295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0.50980395}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1370,14 +1371,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25.55
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
-  m_HorizontalAlignment: 1
+  m_fontStyle: 34
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1586,7 +1587,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 27.544, y: -3.565, z: -3.288}
 --- !u!1 &963194225
 GameObject:
@@ -3417,7 +3418,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1851040222
 PrefabInstance:
@@ -3781,57 +3782,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994202653}
   m_CullTransparentMesh: 1
---- !u!1 &2020609037
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2020609039}
-  - component: {fileID: 2020609038}
-  m_Layer: 0
-  m_Name: UIController
-  m_TagString: UImanager
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2020609038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020609037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e75f02a25840f4a92af2e97a48ab2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songVol: {fileID: 1197848453}
-  rainVol: {fileID: 37490213}
-  songBtn: {fileID: 1607637666}
-  rainBtn: {fileID: 2031846481}
-  inActiveSongImage: {fileID: 6780871969535559895, guid: 805422213b97d194ba1869b77d3300f0, type: 3}
-  inActiveRainImage: {fileID: 5840244037596497068, guid: 805422213b97d194ba1869b77d3300f0, type: 3}
-  shouldPauseSong: 0
-  shouldPauseRainSFX: 0
---- !u!4 &2020609039
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020609037}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1696.46, y: 529.07745, z: -465.2843}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2026109847
 GameObject:
   m_ObjectHideFlags: 0
@@ -4083,7 +4033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f282bd2c820025949be6a42ca3e46219, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiController: {fileID: 2020609037}
+  SFXinstance: {fileID: 1731013700}
   light: {fileID: 901967648}
 --- !u!4 &2045462707
 Transform:

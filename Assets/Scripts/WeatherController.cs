@@ -8,12 +8,12 @@ public class WeatherController : MonoBehaviour
     Color32 dayColor = new Color32(255, 199, 88,255);
     Color32 nightColor = new Color32(88,203,255,255);
     
-    [SerializeField] GameObject uiController;
+    [SerializeField] GameObject SFXinstance;
     [SerializeField] GameObject light;
 
     
 
-    private UImanager uiManager;
+    private SFXplayer sfxPlayer;
     private Light sun;
     private float sunRange;
     private Color32 sunColor;
@@ -30,7 +30,8 @@ public class WeatherController : MonoBehaviour
     }
     private void init()
     {
-        uiManager = uiController.GetComponent<UImanager>();
+        //uiManager = uiController.GetComponent<UImanager>();
+        sfxPlayer = SFXinstance.GetComponent<SFXplayer>();
         sun = light.GetComponent<Light>();
         sunRange = sun.range;
         sunColor = sun.color;
@@ -39,12 +40,12 @@ public class WeatherController : MonoBehaviour
     {
         // float t = Mathf.PingPong(Time.time, duration) / duration;
         
-        if (uiManager.shouldPauseRainSFX)
+        if (sfxPlayer.getPlayerState()==true)
         {
             sunRange = 16.3f;
             sunColor= dayColor;
         }
-        else if (!uiManager.shouldPauseRainSFX)
+        else if (sfxPlayer.getPlayerState()==false)
         {
             sunRange = 10f;
             sunColor = nightColor;

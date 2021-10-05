@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMOD.Studio;
-
+using TMPro;
 public class ShufflePlaylist : MonoBehaviour
 {
+    [SerializeField]
+    public TMP_Text songTitle;
     [FMODUnity.EventRef]
     public string[] fmodPaths;
+
 
     private EventInstance instance;
     private bool shouldPause;
@@ -62,8 +65,8 @@ public class ShufflePlaylist : MonoBehaviour
                 artistName = userProperties[0].stringValue();
                 songName = userProperties[1].stringValue();
 
-                Debug.Log("Artist: " + artistName);
-                Debug.Log("Song: " + songName);
+                songTitle.text = artistName+" - "+songName;
+
 
                 instance.start();
                 instance.release();
