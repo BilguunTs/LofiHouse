@@ -109,5 +109,10 @@ public class ShufflePlaylist : MonoBehaviour
        instance.setVolume(vol);
     }
 
+    public void PlayNext()
+    {
+        instance.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+
    
 }
