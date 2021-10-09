@@ -65,7 +65,7 @@ public class ShufflePlaylist : MonoBehaviour
                 artistName = userProperties[0].stringValue();
                 songName = userProperties[1].stringValue();
 
-                songTitle.text = artistName+" - "+songName;
+                songTitle.text = artistName+" -"+" "+songName;
 
 
                 instance.start();
