@@ -34,10 +34,10 @@ public class ShufflePlaylist : MonoBehaviour
             a[rnd] = temp;
         }
 
-        for (int i = 0; i < a.Length; i++)
-        {
-            Debug.Log(a[i]);
-        }
+       // for (int i = 0; i < a.Length; i++)
+       // {
+       //    Debug.Log(a[i]);
+       // }
 
         StartCoroutine(PlayMusic(a));
     }

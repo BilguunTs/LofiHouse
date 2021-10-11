@@ -8,16 +8,19 @@ public class IconChanger : MonoBehaviour
     [SerializeField]
     public Sprite defaultImg;
     public Sprite activeImage;
-
+    public bool AutoMode = true;
 
     private bool isClicked =false;
     private Button thisBtn;
 
     void Start()
     {
+        if (AutoMode)
+        {
         thisBtn = GetComponent<Button>();
         GetComponent<Image>().sprite = activeImage;
         thisBtn.onClick.AddListener(TaskOnClick);
+        }
     }
 
     // Update is called once per frame
