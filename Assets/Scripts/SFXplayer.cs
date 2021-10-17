@@ -7,6 +7,8 @@ public class SFXplayer : MonoBehaviour
     // Start is called before the first frame update
     [FMODUnity.EventRef]
     public string fmodPath;
+    [SerializeField]
+    public GameObject raingenerator;
 
     private bool shouldPlaySFX;
     private EventInstance instance;
@@ -21,7 +23,13 @@ public class SFXplayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (shouldPlaySFX)
+        {
+            raingenerator.SetActive(false);
+        }else if (!shouldPlaySFX)
+        {
+            raingenerator.SetActive(true);
+        }
     }
     public void PauseSFX()
     {
