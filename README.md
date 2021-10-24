@@ -1,6 +1,6 @@
 
 # Virtual MP
-### 👋 Welcome to your Virtual MP (border-bottom: none)
+### 👋 Welcome to your Virtual MP 
 Virtual MP was made to enjoy the relaxing atmosphere to ease your start on whatever you want to get done. Please stay as long as you like and enjoy a cozy, distraction-free environment.
 
 ### Relaxing Lo-fi Soundtrack
