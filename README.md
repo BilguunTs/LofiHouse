@@ -14,6 +14,9 @@ There is no way to stop the timer, except for quitting the game.  Stay committed
 
 ## links:
 download : https://vabsounds.itch.io/virtual-mp
+youtube  : https://www.youtube.com/channel/UCk5PCLoJnIWHewnMvncfItg
+soundcloud : https://soundcloud.com/user-220396881
+facebook : https://www.facebook.com/vabstudio
 
 
 ![Main logo (2)](https://user-images.githubusercontent.com/46282880/136647288-ea7ab979-135f-4f6e-be22-5edf94d76827.png)
